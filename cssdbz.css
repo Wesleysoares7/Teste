@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 2rem;
+    background-color: rgb(108, 236, 236);
+    width: 70%;
+    margin: auto;
+}
+
+h1 {
+    background-color: rgb(202, 174, 174);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+}
+
+h2 {
+    font-size: medium;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    border: 2px rgba(230, 112, 15, 0.938) solid;
+    padding: 1rem;
+    border-radius: .5rem;
+
+}
+
+.card img {
+    width: 100%;
+
+
+}
+
+#sheilong {
+    width: 120px;
+    right: auto;
+}
+
+#todos {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+img {
+    transition: 200ms;
+    filter: brightness(60%);
+}
+
+img:hover {
+    transition: 200ms;
+    filter: brightness(100%);
+}
+
+.card {
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(25, 125, 138, 0.651);
+    border-radius: .5rem;
+    height: 13rem;
+    transform: scale(90%);
+    transition: all 200ms;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card:hover {
+    transform: scale(100%);
+}
+
+#cards-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}

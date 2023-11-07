@@ -78,12 +78,8 @@ h2 {
 
 .centro {
     position: absolute;
-    border-radius: .5rem;
     top: 0%;
-    left: 35%;
-    transition: translate(-50%, -50);
-    text-align: center;
-    padding: 10px;
+    left: 42%;
 }
 
 #grande {

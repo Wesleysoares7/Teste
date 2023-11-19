@@ -11,27 +11,27 @@ const personagens = [
         {
             nome:"Goku",
             imgNormal:"./imagens/goku saga z.webp",
-            imgPower:"./imagens/gokupower.png",
+            imgPower:"./imagens/gokupower.webp",
             link:"https://pt.wikipedia.org/wiki/Goku"
         
         },
         {
             nome:"Vegeta",
             imgNormal:"./imagens/vegeta saga z.webp",
-            imgPower:"./imagens/vegetasupersayadin.png",
+            imgPower:"./imagens/vegetasupersayadin.webp",
             link:"https://pt.wikipedia.org/wiki/Vegeta"
 
         },
         {
             nome:"Gohan",
             imgNormal:"./imagens/Gohan.webp",
-            ImgPower:"./imagens/gohanpower.png",
+            imgPower:"./imagens/gohanpower.webp",
             link:"https://pt.wikipedia.org/wiki/Son_Gohan"
         },
         {
             nome:"Kuririn",
             imgNormal:"./imagens/kuririn saga z.webp",
-            imgPower:"./imagens/kuririnpower.png",
+            imgPower:"./imagens/kuririnpower2.png",
             link:"https://pt.wikipedia.org/wiki/Kuririn"
         }
     ]

@@ -1,8 +1,8 @@
 const header = document.querySelector('header')
-header.style.background="blue"
+header.style.background="#c7bf9f"
 
 const titulo = document.createElement('h1')
-titulo.innerText='dragon ball z'
+titulo.innerText='Dragon Ball z'
 titulo.style.marginTop="6rem"
 const tituloConteiner = document.querySelector('#titulo')
 tituloConteiner.appendChild(titulo)
@@ -10,24 +10,28 @@ tituloConteiner.appendChild(titulo)
 const personagens = [
         {
             nome:"Goku",
-            img:"./imagens/goku saga z.webp",
+            imgNormal:"./imagens/goku saga z.webp",
+            imgPower:"./imagens/gokupower.png",
             link:"https://pt.wikipedia.org/wiki/Goku"
         
         },
         {
             nome:"Vegeta",
-            img:"./imagens/vegeta saga z.webp",
+            imgNormal:"./imagens/vegeta saga z.webp",
+            imgPower:"./imagens/vegetasupersayadin.png",
             link:"https://pt.wikipedia.org/wiki/Vegeta"
 
         },
         {
             nome:"Gohan",
-            img:"./imagens/Gohan.webp",
+            imgNormal:"./imagens/Gohan.webp",
+            ImgPower:"./imagens/gohanpower.png",
             link:"https://pt.wikipedia.org/wiki/Son_Gohan"
         },
         {
             nome:"Kuririn",
-            img:"./imagens/kuririn saga z.webp",
+            imgNormal:"./imagens/kuririn saga z.webp",
+            imgPower:"./imagens/kuririnpower.png",
             link:"https://pt.wikipedia.org/wiki/Kuririn"
         }
     ]
@@ -46,7 +50,9 @@ const personagens = [
         const cardTitulo = document.createElement('p')
         cardTitulo.innerText=personagem.nome
         const cardImg = document.createElement('img')
-        cardImg.src=personagem.img
+        cardImg.src=personagem.imgNormal
+        cardImg.className='dbz'
+        cardImg.id=personagem.nome
         linkTitulo.appendChild(cardTitulo)
         linkImg.appendChild(cardImg)
         card.appendChild(linkTitulo)
@@ -68,6 +74,44 @@ const personagens = [
             }
             
             
-        }       
-        // const vegeta = card[1]
-        // vegeta.style.background="red"
+        }
+function power() {
+//    window.alert('cliquei')
+    //const card = document.querySelectorAll('.card')
+    const dbzImgs = document.querySelectorAll('.dbz')
+    for (let index = 0; index < dbzImgs.length; index++) {
+        const element = dbzImgs[index];
+        element.src=personagens[index].imgPower
+        
+    }
+  
+ 
+}
+
+function normal() {
+    const dbzImgs = document.querySelectorAll('.dbz')
+    for (let index = 0; index < dbzImgs.length; index++) {
+        const element = dbzImgs[index];
+        element.src=personagens[index].imgNormal
+        
+    }
+}    
+
+function handleMouseOver(event) {
+    const imgChage = event.target.lastChild.firstChild
+    for (let index = 0; index < personagens.length; index++) {
+        const personagem = personagens[index];
+        if (personagem.nome===imgChage.id) {
+            imgChage.src=personagem.imgPower
+        }
+        
+    }
+    
+}
+const cards = document.querySelectorAll('.card')
+for (let index = 0; index < cards.length; index++) {
+    const card = cards[index];
+    card.addEventListener('mouseover',handleMouseOver)
+    card.addEventListener('mouseout',normal)
+    
+}
